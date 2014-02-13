@@ -1,0 +1,98 @@
+Hunger Games Systems
+
+Aspects:
+
+Skills & levels: every weapon will have a skill corresponding to it, certain tasks in the game will 
+also have skills connected to them
+
+Inventory: an easy to see inventory will store random non-weapons
+
+Hunger: two levels, hunger and saturation, eat good food, stay full longer
+
+Thirst: drink water to stay functional, bad water can get you sick
+
+Player type: has sprinting, jump delay, shorter jump(3-4 not 5), slows down the more hungry/thirsty
+
+Armour: using default avatar accents and models.
+
+Leaderboards: records all kills / wins of individual games and has a 'high score' list, also records
+how many people participated in said games.
+
+Saving: saves everything on the server, records what happens in the games as well
+
+Events: various minor to major hunger games events , fire storm, gas, explosions, etc drought,
+bot spawns, acid rain, 'dinner' in the center, cold front,
+
+Brick events: events to interact with the built world, onLoaded, brick->setItemSpawn [rarity],
+brick->setFoodSpawn [rarity], etc.
+
+Weapons: various weapons, bow with individual arrow ammo, draw speed can vary, knives, swords, maces,
+pebbles, sticks, weapons have durability.
+
+Crafting: can craft stuff from random items you find, find misc items from spawn but also by using the
+search cmd, as long as you stay put in certain zones with this cmd active you will find items.
+
+Warmth: certain clothing protects you from cold, a fire will keep you warm
+
+Modifying environment: if you have enough clearance room you can create stuff in the world, camp fire,
+bedroll, a pot, etc, these bricks spawn in with events on them onActivate->player->sleep or
+onfirestarter->brick->lightfire,etc
+
+Hunting: animal bots will wonder the games, kill them to get meat, bone and fur/skins
+
+Director AI: manages everything, item spawns, animal spawns, events, etc. Events are determined to
+occur from time elapse and # of survivors. The later in the game with more people the more dangerous
+the event.
+
+GUI: chicken nuggets, water droplets, hearts, arrow selection (arrow graphic showing type.of arrow
+to use), inventory screen, leaderboards menu, scheduling calendar
+
+Schedule: depending how long the games end up averaging out to, there will be scheduled games set
+periodically throughout the day the games might only start when there is 24 ppl
+
+--------------------------------------------------------
+
+Zones will be everywhere on blocks and around vital locations, around water sources, around
+crafting stations, etc
+
+To set zones, events will take charge, onLoaded->brick->createzone [type] [xyz]
+Type can be water source, murky water source, crafting table, camp fire, fire, salt water,
+forest floor, stones, mushroom patch, etc.
+
+____________________________________
+
+Hunger Games - What must be done for Alpha Testing
+What must be ready before some testing can be done?
+Saving, leaderboards, player type, basic inventory, basic non zone searching, some events such as
+onloaded, setitemspawn,
+
+
+Various things that would be better to have a visual but still function without, ex: acid rain,
+weapons, camp fire, bedroll, heating water, etc
+
+Instead of an ai there could be servercmds to initialize stuff.
+
+No clientside for hotkeys and potential GUI elements
+
+No scheduling, alpha testing will be used to try and discover the average game time to help future
+schedules.
+
+--------------------------------------------------------
+
+GUI elements:
+	Player Status:
+		Stamina/Exhaustion -> Status icon on a bottomprint
+		Hunger -> Status icon on a bottomprint
+		Thirst -> Status icon on a bottomprint
+		Warmth -> Status icon on a bottomprint
+	Player State:
+		Inventory -> Inventory is managed by weight, list of items being carried
+		Crafting -> Select recipe in inventory and see if you have ingredients for, if so you can craft (like d3)
+		Weapons -> Status icon on a bottomprint, this is durability and arrow selection
+		Armour -> Status icon on a bottomprint, this is durability
+	Client:
+		Skills&Levels -> A menu show casing all the skills available and your current level in them
+		Leaderboards -> A menu showing your global statistics, your kills, wins and losses.
+		Schedule -> A menu showing the time of day when each event starts
+
+
