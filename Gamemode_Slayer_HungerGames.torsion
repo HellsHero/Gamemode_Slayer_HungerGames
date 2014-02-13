@@ -1,0 +1,23 @@
+<TorsionProject>
+<Name>Gamemode_Slayer_HungerGames</Name>
+<WorkingDir/>
+<EntryScript>Server.cs</EntryScript>
+<DebugHook>dbgSetParameters( #port#, "#password#", true );</DebugHook>
+<Mods/>
+<ScannerExts>cs; gui</ScannerExts>
+<Configs>
+<Config>
+<Name>HungerGames</Name>
+<Executable/>
+<Arguments/>
+<HasExports>false</HasExports>
+<Precompile>false</Precompile>
+<InjectDebugger>false</InjectDebugger>
+<UseSetModPaths>false</UseSetModPaths>
+</Config>
+</Configs>
+<SearchURL/>
+<SearchProduct>TGE</SearchProduct>
+<SearchVersion>HEAD</SearchVersion>
+<ExecModifiedScripts>true</ExecModifiedScripts>
+</TorsionProject>

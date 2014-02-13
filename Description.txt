@@ -1,0 +1,3 @@
+Title: Slayer - Hunger Games
+Author: HellsHero
+A hunger games gamemode similar to the national event portrayed in the series by the same name.
